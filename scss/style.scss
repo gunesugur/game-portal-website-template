@@ -1,0 +1,100 @@
+@import "abstracts";
+@import "base";
+@import "components";
+
+/*----------------GENERAL SETTIGNS----------------*/
+
+html {
+  font-size: 16px;
+}
+body {
+  font-family: $secondary-font;
+  color: $text-color;
+  background-color: $light-color;
+}
+.container {
+  max-width: 90rem; //1440px
+  margin: auto;
+  width: 100%;
+}
+a {
+  text-transform: uppercase;
+  font-family: $primary-font;
+  color: $text-color;
+}
+.main-header {
+  background-color: $secondary-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $primary-font;
+}
+
+/*--------------------TOP HEADER --------------------*/
+.top-header {
+  border-bottom: 2px solid $primary-color;
+  padding: 10px 0px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      h1 {
+        font-size: 3rem;
+        a {
+          // font-size: 1.3rem;
+          transition: 0.5s ease-in-out;
+          &:hover {
+            color: $hover-primary-color;
+          }
+        }
+      }
+    }
+    .top-social-menu {
+      display: flex;
+      li {
+        list-style-type: none;
+        display: inherit;
+        margin: 0px 1rem;
+        a {
+          font-size: 1.3rem;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            color: $hover-primary-color;
+          }
+        }
+      }
+    }
+    .login-area {
+      a {
+        margin: 0rem 0.5rem;
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+/*--------------------NAV HEADER --------------------*/
+.search-form {
+  border-bottom: 1px solid;
+  display: inline;
+  padding: 5px;
+  &::after {
+    content: "\f002";
+    font: var(--fa-font-solid);
+  }
+}
+
+.dropdown-icon {
+  &::after {
+    content: "\f078";
+    font: var(--fa-font-solid);
+  }
+}
+
+/*--------------------MAIN CSS--------------------*/
